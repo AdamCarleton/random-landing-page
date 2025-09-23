@@ -83,3 +83,24 @@
     background-color: var(--purple);
     transition: all 0.3s ease;
 }
+
+.navbar-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 968px) {
+    .navbar-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--white);
+        z-index: 10;
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+    }
+}
