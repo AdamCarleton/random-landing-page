@@ -6,4 +6,9 @@ menu.addEventListener("click", function () {
     menuLinks.classList.toggle("active");
 
     console.log("it worked");
-})
+});
+
+// Function to make logos move
+const logos = document.querySelector(".rotating-logos-track").cloneNode(true);
+document.querySelector(".rotating-logos").appendChild(logos);
+
