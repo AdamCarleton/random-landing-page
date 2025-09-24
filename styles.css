@@ -8,6 +8,7 @@
     --white: #fff;
     --lavender: #b296e6;
     --purple: #9162b0;
+    --lighterblack: #131313;
 }
 
 .navbar-container {
@@ -60,11 +61,11 @@
     align-items: center;
 }
 
-.navbar-btn.mobile {
+.navbar-btn .mobile {
     display: none;
 }
 
-.navbar-btn.desktop {
+.navbar-btn .desktop {
     display: flex;
 }
 
@@ -102,5 +103,60 @@
         background: none;
         cursor: pointer;
         padding: 0;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100% - 80px);
+        opacity: 0;
+        transition: all 0.5s ease;
+        background-color: var(--lighterblack);
+        z-index: 10;
+        margin: 0;
+    }
+
+    .navbar-menu.active {
+        left: 0;
+        opacity: 1;
+    }
+
+    .navbar-item {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* SIgn Up Button */
+    .navbar-btn.desktop {
+        display: none;
+    }
+
+    .navbar-btn.mobile {
+        text-align: center;
+        padding-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        width: 80%;
+        height: 60px;
+        justify-content: center;
     }
 }
