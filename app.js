@@ -29,3 +29,9 @@ function switchPricing() {
         yearlyDiscount.style.display = "none";
     }
 }
+
+window.addEventListener("load", () => {
+    const yearElement = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearElement.textContent = currentYear;
+});
